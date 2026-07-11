@@ -243,7 +243,7 @@ console.log("Sending Data =", data);
 
     console.log("Sending request...");
 
-    const response = await fetch("http://13.60.57.112:8000/api/generate-resume", {
+    const response = await fetch("/api/generate-resume", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
