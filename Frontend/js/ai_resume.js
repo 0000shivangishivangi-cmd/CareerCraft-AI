@@ -98,7 +98,7 @@ async function generateResume() {
 
         }, 1500);
 
-        const response = await fetch("http://127.0.0.1:8000/api/generate-from-ai", {
+        const response = await fetch("http://13.60.57.112:8000/api/generate-from-ai", {
 
             method: "POST",
 
