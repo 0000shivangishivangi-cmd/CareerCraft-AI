@@ -1,57 +1,75 @@
-# CareerCraft AI
+# CareerCraft AI 🚀
 
-CareerCraft AI is an AI-powered Resume Builder that generates ATS-friendly resumes using Google's Gemini AI.
-
-## Features
-
-- AI Resume Generation
-- ATS-Friendly Resume Format
-- Resume Editing
-- Resume Preview
-- PDF Download
-- Responsive UI
-- Clean JSON-based Resume Structure
+An AI-powered Resume Builder that generates professional, ATS-friendly resumes using **Google Gemini AI**. CareerCraft AI helps users create high-quality resumes in seconds by leveraging Artificial Intelligence and modern web technologies.
 
 ---
 
-## Tech Stack
+# ✨ Features
 
-### Frontend
+- 🤖 AI Resume Generation using Google Gemini AI
+- 📄 ATS-Friendly Resume Format
+- ✏️ Edit Generated Resume
+- 👀 Live Resume Preview
+- 📥 Download Resume as PDF
+- 📱 Responsive User Interface
+- 📂 JSON-Based Resume Architecture
+- ⚡ FastAPI Backend
+- 🔥 Clean and Modular Code Structure
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
 - HTML5
 - CSS3
 - JavaScript
 
-### Backend
-- FastAPI
+## Backend
 - Python
+- FastAPI
 
-### AI
+## AI Integration
 - Google Gemini API
 
-### Deployment
+## Tools
+- Git
+- GitHub
+- VS Code
+
+## Deployment
 - AWS EC2
+- Docker (Planned)
 
 ---
 
-## Project Structure
+# 📁 Project Structure
 
-```
+```text
 CareerCraft-AI/
+│
+├── Frontend/
+│   ├── assets/
+│   ├── css/
+│   ├── images/
+│   ├── js/
+│   ├── index.html
+│   ├── ai_resume.html
+│   ├── edit_ai_resume.html
+│   └── preview.html
 │
 ├── backend/
 │   ├── app/
+│   │   ├── config.py
+│   │   ├── main.py
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── schemas/
+│   │   ├── services/
+│   │   └── utils/
+│   │
 │   ├── requirements.txt
-│   └── main.py
-│
-├── Frontend/
-│   ├── css/
-│   ├── js/
-│   ├── assets/
-│   ├── images/
-│   ├── index.html
-│   ├── ai_resume.html
-│   ├── preview.html
-│   └── edit_ai_resume.html
+│   └── test_model.py
 │
 ├── docker/
 ├── docs/
@@ -61,90 +79,129 @@ CareerCraft-AI/
 
 ---
 
-## Installation
+# ⚙️ Installation
 
-Clone the repository
-
-```bash
-git clone <repository-url>
-```
-
-Go to backend
+## Clone Repository
 
 ```bash
-cd backend
+git clone https://github.com/0000shivangishivangi-cmd/CareerCraft-AI.git
 ```
 
-Create virtual environment
+## Navigate to Backend
+
+```bash
+cd CareerCraft-AI/backend
+```
+
+## Create Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate environment
+## Activate Virtual Environment
 
-Windows
+### Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-Install dependencies
+### Linux / macOS
+
+```bash
+source venv/bin/activate
+```
+
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run backend
+## Run FastAPI Server
 
 ```bash
 python -m uvicorn app.main:app --reload
 ```
 
-Open frontend using Live Server.
+Backend runs at
+
+```
+http://127.0.0.1:8000
+```
+
+Open the frontend using **Live Server**.
 
 ---
 
-## AI Resume Flow
+# 🔄 AI Resume Generation Workflow
 
+```text
 User Input
-
-↓
-
+      │
+      ▼
 Frontend Validation
-
-↓
-
+      │
+      ▼
 FastAPI Backend
-
-↓
-
-Gemini AI
-
-↓
-
-Generated Resume JSON
-
-↓
-
+      │
+      ▼
+Google Gemini AI
+      │
+      ▼
+Resume JSON Generated
+      │
+      ▼
 Resume Preview
-
-↓
-
-PDF Download
+      │
+      ▼
+PDF Generation
+      │
+      ▼
+Download Resume
+```
 
 ---
 
-## Future Improvements
+# 📡 API Endpoint
+
+### Generate AI Resume
+
+```
+POST /api/generate-from-ai
+```
+
+Returns a structured JSON response containing:
+
+- Summary
+- Skills
+- Experience
+- Projects
+- Education
+- Certifications
+- Achievements
+- Languages
+
+---
+
+# 🌟 Future Enhancements
 
 - Multiple Resume Templates
 - User Authentication
 - Resume History
 - Cloud Database Integration
-- Resume Score Analysis
+- Resume Score Analyzer
+- Resume Sharing via Link
+- Cover Letter Generator
+- Multi-Language Resume Support
 
 ---
 
-## Author
+# 👥 Team
 
-Developed by Shivangi Maurya
+**Developed by Team Generation-Z**
+
+---
+
+⭐ If you like this project, don't forget to star the repository.
