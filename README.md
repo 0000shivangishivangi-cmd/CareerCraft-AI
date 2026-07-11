@@ -197,7 +197,35 @@ Returns a structured JSON response containing:
 - Multi-Language Resume Support
 
 ---
+# 📸 Screenshots
 
+## 🏠 Home Page
+
+![Home](screenshots/home.jpg)
+
+---
+
+## 🤖 AI Resume Generator
+
+![AI Resume](screenshots/ai-resume.png)
+
+---
+
+## ✏️ Edit AI Resume
+
+![Edit Resume](screenshots/edit-ai-resume.png)
+
+---
+
+## 👀 Resume Preview
+
+![Preview](screenshots/preview-page.png)
+
+---
+
+## 📄 Generated PDF
+
+![Generated PDF](screenshots/generated-pdf.png)
 # 👥 Team
 
 **Developed by Team Generation-Z**
