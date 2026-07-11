@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CareerCraft AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Frontend/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-file-earmark-person me-2"></i>CareerCraft AI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="builder.html">Resume Builder</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="preview.html">Preview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="ai_resume.html">
+                        AI Generator
+                    </a>
+                </li>
+                     <li class="nav-item">
+                    <a class="nav-link active" href="edit_ai_resume.html">
+                        Edit Resume
+                    </a>
+                </li>   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="text-center py-5">
+                <span class="badge badge-primary mb-3">Contact Us</span>
+                <h1 class="page-title">We'd Love to <span class="gradient-text">Hear From You</span></h1>
+                <p class="page-subtitle">Have questions or feedback? We're here to help!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Contact Info -->
+                <div class="col-lg-5">
+                    <div class="contact-info">
+                        <h2>Get in Touch</h2>
+                        <p>Our team is ready to assist you with any questions about your resume, our features, or career advice.</p>
+
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Email</h5>
+                                <p>support@careercraftai.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Phone</h5>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Address</h5>
+                                <p>123 Innovation Avenue<br>San Francisco, CA 94105</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item glass-card">
+                            <div class="contact-icon">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Business Hours</h5>
+                                <p>Monday - Friday: 9AM - 6PM PST<br>Saturday - Sunday: Closed</p>
+                            </div>
+                        </div>
+
+                        <div class="social-links-large mt-4">
+                            <h5>Follow Us</h5>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon glass-card">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a href="#" class="social-icon glass-card">
+                                    <i class="bi bi-twitter-x"></i>
+                                </a>
+                                <a href="#" class="social-icon glass-card">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-icon glass-card">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-7">
+                    <div class="contact-form-wrapper glass-card">
+                        <h3>Send Us a Message</h3>
+                        <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+
+                        <form id="contactForm" class="contact-form">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="contactName" placeholder="Your Name" required>
+                                        <label for="contactName"><i class="bi bi-person me-2"></i>Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="contactEmail" placeholder="Your Email" required>
+                                        <label for="contactEmail"><i class="bi bi-envelope me-2"></i>Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="tel" class="form-control" id="contactPhone" placeholder="Phone Number">
+                                        <label for="contactPhone"><i class="bi bi-telephone me-2"></i>Phone Number</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <select class="form-control" id="contactSubject" placeholder="Subject">
+                                            <option value="">Select Subject</option>
+                                            <option value="General Inquiry">General Inquiry</option>
+                                            <option value="Technical Support">Technical Support</option>
+                                            <option value="Feature Request">Feature Request</option>
+                                            <option value="Partnership">Partnership</option>
+                                            <option value="Feedback">Feedback</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <label for="contactSubject"><i class="bi bi-tag me-2"></i>Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="contactMessage" placeholder="Your Message" style="height: 150px;" required></textarea>
+                                        <label for="contactMessage"><i class="bi bi-chat me-2"></i>Your Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="bi bi-send me-2"></i>Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div id="contactSuccess" class="contact-success" style="display: none;">
+                            <div class="success-icon">
+                                <i class="bi bi-check-circle-fill"></i>
+                            </div>
+                            <h4>Message Sent Successfully!</h4>
+                            <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section py-5">
+        <div class="container">
+            <div class="map-wrapper glass-card">
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <i class="bi bi-geo-alt"></i>
+                        <h4>Visit Our Office</h4>
+                        <p>123 Innovation Avenue, San Francisco, CA 94105</p>
+                        <a href="https://maps.google.com" target="_blank" class="btn btn-outline-primary">
+                            <i class="bi bi-map me-2"></i>Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Mini Section -->
+    <section class="faq-mini-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge badge-primary mb-3">Quick Help</span>
+                <h2 class="section-title">Common <span class="gradient-text">Questions</span></h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion glass-accordion" id="contactFaq">
+                        <div class="accordion-item glass-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq1">
+                                    How quickly do you respond to inquiries?
+                                </button>
+                            </h2>
+                            <div id="contactFaq1" class="accordion-collapse collapse show" data-bs-parent="#contactFaq">
+                                <div class="accordion-body">
+                                    Our support team typically responds within 24 hours on business days. For urgent matters, please call our phone line during business hours.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item glass-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq2">
+                                    Can I get career advice from your team?
+                                </button>
+                            </h2>
+                            <div id="contactFaq2" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+                                <div class="accordion-body">
+                                    Yes! Our career experts are available to help with resume optimization, interview preparation, and career planning. Schedule a consultation through the contact form.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item glass-card">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq3">
+                                    Do you offer enterprise solutions?
+                                </button>
+                            </h2>
+                            <div id="contactFaq3" class="accordion-collapse collapse" data-bs-parent="#contactFaq">
+                                <div class="accordion-body">
+                                    Absolutely! We offer enterprise plans for organizations looking to provide CareerCraft AI to their employees or members. Contact us for custom pricing and features.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">&copy; 2025 CareerCraft AI. All rights reserved. Design and Developed By Team Generation-Z</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../Frontend/js/main.js"></script>
+    <script type="module" src="../Frontend/js/contact.js"></script>
+</body>
+</html>

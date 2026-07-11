@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder - CareerCraft AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Frontend/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-file-earmark-person me-2"></i>CareerCraft AI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="builder.html">Resume Builder</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="preview.html">Preview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link active" href="ai_resume.html">
+                        AI Generator
+                    </a>
+                </li>
+                     <li class="nav-item">
+                    <a class="nav-link active" href="edit_ai_resume.html">
+                        Edit Resume
+                    </a>
+                </li>   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="text-center py-5">
+                <span class="badge badge-primary mb-3">Resume Builder</span>
+                <h1 class="page-title">Build Your <span class="gradient-text">Professional Resume</span></h1>
+                <p class="page-subtitle">Fill in your details below and let AI help you create a stunning resume</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Builder Form -->
+    <section class="builder-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <form id="resumeForm" class="resume-form">
+                        <!-- Progress Indicator -->
+                        <div class="form-progress mb-5">
+                            <div class="progress-step active" data-step="1">
+                                <div class="step-circle">1</div>
+                                <span>Personal</span>
+                            </div>
+                            <div class="progress-line"></div>
+                            <div class="progress-step" data-step="2">
+                                <div class="step-circle">2</div>
+                                <span>Education</span>
+                            </div>
+                            <div class="progress-line"></div>
+                            <div class="progress-step" data-step="3">
+                                <div class="step-circle">3</div>
+                                <span>Experience</span>
+                            </div>
+                            <div class="progress-line"></div>
+                            <div class="progress-step" data-step="4">
+                                <div class="step-circle">4</div>
+                                <span>Projects</span>
+                            </div>
+                            <div class="progress-line"></div>
+                            <div class="progress-step" data-step="5">
+                                <div class="step-circle">5</div>
+                                <span>Skills</span>
+                            </div>
+                        </div>
+
+                        <!-- Personal Information -->
+                        <div class="form-section glass-card" id="section-personal">
+                            <div class="section-header">
+                                <div class="section-icon">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <div>
+                                    <h3>Personal Information</h3>
+                                    <p>Enter your basic contact details</p>
+                                </div>
+                            </div>
+                            <div class="section-body">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="full_name" name="fullName" placeholder="Full Name">
+                                            <label for="fullName"><i class="bi bi-person me-2"></i>Full Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                                            <label for="email"><i class="bi bi-envelope me-2"></i>Email Address</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+                                            <label for="phone"><i class="bi bi-telephone me-2"></i>Phone Number</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="address" name="address" placeholder="Address">
+                                            <label for="address"><i class="bi bi-geo-alt me-2"></i>Address</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="url" class="form-control" id="linkedin" name="linkedin" placeholder="LinkedIn">
+                                            <label for="linkedin"><i class="bi bi-linkedin me-2"></i>LinkedIn Profile</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="url" class="form-control" id="github" name="github" placeholder="GitHub">
+                                            <label for="github"><i class="bi bi-github me-2"></i>GitHub Profile</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education -->
+                        <div class="form-section glass-card" id="section-education">
+                            <div class="section-header">
+                                <div class="section-icon">
+                                    <i class="bi bi-mortarboard"></i>
+                                </div>
+                                <div>
+                                    <h3>Education</h3>
+                                    <p>Add your educational background</p>
+                                </div>
+                                <button type="button" class="btn btn-add ms-auto" onclick="addEducation()">
+                                    <i class="bi bi-plus-circle me-2"></i>Add Education
+                                </button>
+                            </div>
+                            <div class="section-body" id="educationContainer">
+                                <div class="education-entry entry-card glass-card-inner" data-index="0">
+                                    <div class="entry-header">
+                                        <span class="entry-number">Education 1</span>
+                                        <button type="button" class="btn-remove" onclick="removeEducation(this)">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="degree0" name="degree0" placeholder="Degree">
+                                                <label for="degree0">Degree / Program</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="college0" name="college0" placeholder="College">
+                                                <label for="college0">Institution Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-floating">
+                                                <input type="number" step="0.01" class="form-control" id="cgpa0" name="cgpa0" placeholder="CGPA">
+                                                <label for="cgpa0">CGPA / GPA</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-floating">
+                                                <input type="number" class="form-control" id="startYear0" name="startYear0" placeholder="Start Year" min="1950" max="2030">
+                                                <label for="startYear0">Start Year</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-floating">
+                                                <input type="number" class="form-control" id="passingYear0" name="passingYear0" placeholder="Passing Year" min="1950" max="2030">
+                                                <label for="passingYear0">Passing Year</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience -->
+                        <div class="form-section glass-card" id="section-experience">
+                            <div class="section-header">
+                                <div class="section-icon">
+                                    <i class="bi bi-briefcase"></i>
+                                </div>
+                                <div>
+                                    <h3>Work Experience</h3>
+                                    <p>Add your professional experience</p>
+                                </div>
+                                <button type="button" class="btn btn-add ms-auto" onclick="addExperience()">
+                                    <i class="bi bi-plus-circle me-2"></i>Add Experience
+                                </button>
+                            </div>
+                            <div class="section-body" id="experienceContainer">
+                                <div class="experience-entry entry-card glass-card-inner" data-index="0">
+                                    <div class="entry-header">
+                                        <span class="entry-number">Experience 1</span>
+                                        <button type="button" class="btn-remove" onclick="removeExperience(this)">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="company0" name="company0" placeholder="Company">
+                                                <label for="company0">Company Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="role0" name="role0" placeholder="Role">
+                                                <label for="role0">Job Title / Role</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="duration0" name="duration0" placeholder="Duration">
+                                                <label for="duration0">Duration (e.g., Jan 2022 - Present)</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="location0" name="location0" placeholder="Location">
+                                                <label for="location0">Location</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea class="form-control" id="responsibilities0" name="responsibilities0" placeholder="Responsibilities" style="height: 120px;"></textarea>
+                                                <label for="responsibilities0">Responsibilities & Achievements (one per line)</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projects -->
+                        <div class="form-section glass-card" id="section-projects">
+                            <div class="section-header">
+                                <div class="section-icon">
+                                    <i class="bi bi-folder"></i>
+                                </div>
+                                <div>
+                                    <h3>Projects</h3>
+                                    <p>Highlight your key projects</p>
+                                </div>
+                                <button type="button" class="btn btn-add ms-auto" onclick="addProject()">
+                                    <i class="bi bi-plus-circle me-2"></i>Add Project
+                                </button>
+                            </div>
+                            <div class="section-body" id="projectsContainer">
+                                <div class="project-entry entry-card glass-card-inner" data-index="0">
+                                    <div class="entry-header">
+                                        <span class="entry-number">Project 1</span>
+                                        <button type="button" class="btn-remove" onclick="removeProject(this)">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="projectName0" name="projectName0" placeholder="Project Name">
+                                                <label for="projectName0">Project Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="technologies0" name="technologies0" placeholder="Technologies">
+                                                <label for="technologies0">Technologies Used</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea class="form-control" id="projectDescription0" name="projectDescription0" placeholder="Description" style="height: 100px;"></textarea>
+                                                <label for="projectDescription0">Project Description</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="url" class="form-control" id="projectLink0" name="projectLink0" placeholder="Project Link">
+                                                <label for="projectLink0">Project Link (optional)</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Skills -->
+                        <div class="form-section glass-card" id="section-skills">
+                            <div class="section-header">
+                                <div class="section-icon">
+                                    <i class="bi bi-gear"></i>
+                                </div>
+                                <div>
+                                    <h3>Skills</h3>
+                                    <p>Define your technical and soft skills</p>
+                                </div>
+                            </div>
+                            <div class="section-body">
+                                <div class="row g-4">
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="technicalSkills" name="technicalSkills" placeholder="Technical Skills" style="height: 100px;"></textarea>
+                                            <label for="technicalSkills"><i class="bi bi-code-slash me-2"></i>Technical Skills (comma separated)</label>
+                                        </div>
+                                        <small class="form-hint">e.g., JavaScript, Python, React, Node.js, SQL, AWS</small>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="softSkills" name="softSkills" placeholder="Soft Skills" style="height: 100px;"></textarea>
+                                            <label for="softSkills"><i class="bi bi-people me-2"></i>Soft Skills (comma separated)</label>
+                                        </div>
+                                        <small class="form-hint">e.g., Leadership, Communication, Problem Solving, Team Work</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Certifications -->
+                        <div class="form-section glass-card" id="section-certifications">
+                            <div class="section-header">
+                                <div class="section-icon">
+                                    <i class="bi bi-award"></i>
+                                </div>
+                                <div>
+                                    <h3>Certifications</h3>
+                                    <p>List your professional certifications</p>
+                                </div>
+                                <button type="button" class="btn btn-add ms-auto" onclick="addCertification()">
+                                    <i class="bi bi-plus-circle me-2"></i>Add Certification
+                                </button>
+                            </div>
+                            <div class="section-body" id="certificationsContainer">
+                                <div class="certification-entry entry-card glass-card-inner" data-index="0">
+                                    <div class="entry-header">
+                                        <span class="entry-number">Certification 1</span>
+                                        <button type="button" class="btn-remove" onclick="removeCertification(this)">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="certName0" name="certName0" placeholder="Certification Name">
+                                                <label for="certName0">Certification Name</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="certOrg0" name="certOrg0" placeholder="Issuing Organization">
+                                                <label for="certOrg0">Issuing Organization</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="certDate0" name="certDate0" placeholder="Date">
+                                                <label for="certDate0">Date Obtained</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="url" class="form-control" id="certLink0" name="certLink0" placeholder="Credential Link">
+                                                <label for="certLink0">Credential Link (optional)</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Achievements -->
+                        <div class="form-section glass-card" id="section-achievements">
+                            <div class="section-header">
+                                <div class="section-icon">
+                                    <i class="bi bi-trophy"></i>
+                                </div>
+                                <div>
+                                    <h3>Achievements</h3>
+                                    <p>Highlight your accomplishments</p>
+                                </div>
+                                <button type="button" class="btn btn-add ms-auto" onclick="addAchievement()">
+                                    <i class="bi bi-plus-circle me-2"></i>Add Achievement
+                                </button>
+                            </div>
+                            <div class="section-body" id="achievementsContainer">
+                                <div class="achievement-entry entry-card glass-card-inner" data-index="0">
+                                    <div class="entry-header">
+                                        <span class="entry-number">Achievement 1</span>
+                                        <button type="button" class="btn-remove" onclick="removeAchievement(this)">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="achievement0" name="achievement0" placeholder="Achievement">
+                                                <label for="achievement0">Achievement Title</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea class="form-control" id="achievementDesc0" name="achievementDesc0" placeholder="Description" style="height: 80px;"></textarea>
+                                                <label for="achievementDesc0">Description</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Languages -->
+                        <div class="form-section glass-card" id="section-languages">
+                            <div class="section-header">
+                                <div class="section-icon">
+                                    <i class="bi bi-translate"></i>
+                                </div>
+                                <div>
+                                    <h3>Languages</h3>
+                                    <p>Languages you speak</p>
+                                </div>
+                                <button type="button" class="btn btn-add ms-auto" onclick="addLanguage()">
+                                    <i class="bi bi-plus-circle me-2"></i>Add Language
+                                </button>
+                            </div>
+                            <div class="section-body" id="languagesContainer">
+                                <div class="language-entry entry-card glass-card-inner" data-index="0">
+                                    <div class="entry-header">
+                                        <span class="entry-number">Language 1</span>
+                                        <button type="button" class="btn-remove" onclick="removeLanguage(this)">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </div>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <input type="text" class="form-control" id="language0" name="language0" placeholder="Language">
+                                                <label for="language0">Language</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-floating">
+                                                <select class="form-control" id="proficiency0" name="proficiency0">
+                                                    <option value="">Select Proficiency</option>
+                                                    <option value="Native">Native</option>
+                                                    <option value="Fluent">Fluent</option>
+                                                    <option value="Advanced">Advanced</option>
+                                                    <option value="Intermediate">Intermediate</option>
+                                                    <option value="Basic">Basic</option>
+                                                </select>
+                                                <label for="proficiency0">Proficiency Level</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Career Objective -->
+                        <div class="form-section glass-card" id="section-objective">
+                            <div class="section-header">
+                                <div class="section-icon">
+                                    <i class="bi bi-bullseye"></i>
+                                </div>
+                                <div>
+                                    <h3>Career Objective</h3>
+                                    <p>Your professional summary</p>
+                                </div>
+                            </div>
+                            <div class="section-body">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="careerObjective" name="careerObjective" placeholder="Career Objective" style="height: 150px;"></textarea>
+                                    <label for="careerObjective">Write a compelling career objective or professional summary</label>
+                                </div>
+                                <!-- <div class="ai-suggestion-box mt-3">
+                                    <div class="ai-suggestion-header">
+                                        <i class="bi bi-cpu me-2"></i>
+                                        <span>AI Suggestion</span>
+                                    </div>
+                                    <p id="aiSuggestion">Fill in your details and click "Get AI Suggestion" to receive personalized recommendations for your career objective.</p>
+                                    <button type="button" class="btn btn-outline-primary btn-sm mt-2" onclick="getAISuggestion()">
+                                        <i class="bi bi-magic me-2"></i>Get AI Suggestion
+                                    </button>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="form-actions glass-card">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <button type="button" class="btn btn-outline-danger btn-lg w-100" onclick="clearForm()">
+                                        <i class="bi bi-trash me-2"></i>Clear Form
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="bi bi-file-earmark-text me-2"></i>Generate Resume
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">&copy; 2025 CareerCraft AI. All rights reserved. Design and Developed By Team Generation-Z</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Frontend/js/main.js"></script>
+    <script src="../Frontend/js/builder.js"></script>
+</body>
+</html>
